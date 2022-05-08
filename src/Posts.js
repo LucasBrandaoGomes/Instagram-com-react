@@ -1,4 +1,8 @@
 // PARTE DOS POSTS
+
+import Imagen from "./Imagen"
+import Icone from "./Icone"
+const iconesAcoes = ["heart-outline", "chatbubble-outline", "paper-plane-outline"]
 const posts =
 [
     {imgTopo: "assets/img/meowed.svg"  , textoTopo: "meowed" , imgConteudo: "assets/img/gato-telefone.svg", imgCurtidas:"assets/img/respondeai.svg", quemCurtiu:"respondeai" ,  maisCurtidas:"outras 101.523 pessoas"},
@@ -9,32 +13,30 @@ function PostIten(props){
         <div class="post">
               <div class="topo">
                 <div class="usuario">
-                  <img src={props.imgTopo}/>
+                  <Imagen urlImagen={props.imgTopo}/>
                   {props.textoTopo}
                 </div>
                 <div class="acoes">
-                  <ion-icon name="ellipsis-horizontal"></ion-icon>
+                  <Icone nomeIcone="ellipsis-horizontal"/>
                 </div>
               </div>
 
               <div class="conteudo">
-                <img src={props.imgConteudo} />
+                <Imagen urlImagen={props.imgConteudo} />
               </div>
 
               <div class="fundo">
                 <div class="acoes">
                   <div>
-                    <ion-icon name="heart-outline"></ion-icon>
-                    <ion-icon name="chatbubble-outline"></ion-icon>
-                    <ion-icon name="paper-plane-outline"></ion-icon>
+                    {iconesAcoes.map((icone) => (<Icone nomeIcone={icone}/>))}
                   </div>
                   <div>
-                    <ion-icon name="bookmark-outline"></ion-icon>
+                    <Icone nomeIcone="bookmark-outline" />
                   </div>
                 </div>
 
                 <div class="curtidas">
-                  <img src={props.imgCurtidas}/>
+                  <Imagen urlImagen={props.imgCurtidas}/>
                   <div class="texto">
                     Curtido por <strong>{props.quemCurtiu}</strong> e <strong>{props.maisCurtidas}</strong>
                   </div>

@@ -1,10 +1,5 @@
+import Icone from "./Icone"
 const icones =["home", "search-outline","add-circle-outline", "heart-outline", "person-outline"]
-
-function Icone(props){
-    return (
-        <ion-icon name={props.nomeIcone}></ion-icon>
-    )
-}
 
 export default function FundoMobile() {
     

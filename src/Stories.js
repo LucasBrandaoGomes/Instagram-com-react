@@ -1,4 +1,5 @@
 
+import Imagen from "./Imagen"
 const listaSotories = 
 [
   {url:"assets/img/9gag.svg", texto: "9gag"},
@@ -27,7 +28,7 @@ function StoriesItens(props){
   return(
     <div class="story">
       <div class="imagem">
-        <img src={props.urlSorie} />
+        <Imagen urlImagen={props.urlSorie} />
       </div>
       <div class="usuario">
         {props.textoUsuario}

@@ -1,16 +1,8 @@
+import Icone from "./Icone";
+import Imagen from "./Imagen";
 const icones = ["paper-plane-outline","compass-outline", "heart-outline", "person-outline"]
 
-function Imagen(props) {
-    return (
-        <img src={props.urlImagen} alt =""/>
-    
-    );
-  }
-function Icone(props){
-    return (
-        <ion-icon name={props.nomeIcone}></ion-icon>
-    )
-}
+
 export default function Navbar() {
     
     return (

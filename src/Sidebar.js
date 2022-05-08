@@ -1,3 +1,5 @@
+import Imagen from "./Imagen"
+
 const sugestaoUsuarios =
 [
     {imgUsuario:"assets/img/bad.vibes.memes.svg" , user: "bad.vibes.memes", status:"Segue você" },
@@ -11,7 +13,7 @@ function SugestaoUsuario(props){
     return(
         <div class="sugestao">
               <div class="usuario">
-                <img src={props.imgUsuario} />
+                <Imagen urlImagen={props.imgUsuario} />
                 <div class="texto">
                   <div class="nome">{props.user}</div>
                   <div class="razao">{props.status}</div>
@@ -37,7 +39,7 @@ function Sugestoes(){
 function Usuario(props){
     return(
     <div class="usuario">
-        <img src={props.urlUsuario} />
+        <Imagen urlImagen={props.urlUsuario} />
         <div class="texto">
         <strong>{props.user}catanacomics</strong>
         {props.userNick}
