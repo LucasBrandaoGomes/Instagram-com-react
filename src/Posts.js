@@ -1,15 +1,15 @@
 // PARTE DOS POSTS
 const posts =
 [
-    {imgTopo: "assets/img/meowed.svg"  , textoTopo: "meowed" , imgConteudo: "assets/img/gato-telefone.svg", quemCurtiu:"respondeai" ,  maisCurtidas:"outras 101.523 pessoas"},
-    {imgTopo: "assets/img/barked.svg"  , textoTopo: "barked" , imgConteudo: "assets/img/dog.svg", quemCurtiu:"adorable_animals" ,  maisCurtidas:"outras 99.159 pessoas"}
+    {imgTopo: "assets/img/meowed.svg"  , textoTopo: "meowed" , imgConteudo: "assets/img/gato-telefone.svg", imgCurtidas:"assets/img/respondeai.svg", quemCurtiu:"respondeai" ,  maisCurtidas:"outras 101.523 pessoas"},
+    {imgTopo: "assets/img/barked.svg"  , textoTopo: "barked" , imgConteudo: "assets/img/dog.svg", imgCurtidas:"assets/img/adorable_animals.svg", quemCurtiu:"adorable_animals" ,  maisCurtidas:"outras 99.159 pessoas"}
 ]
 function PostIten(props){
     return(
         <div class="post">
               <div class="topo">
                 <div class="usuario">
-                  <img src={props.imgTopo} />
+                  <img src={props.imgTopo}/>
                   {props.textoTopo}
                 </div>
                 <div class="acoes">
@@ -47,7 +47,7 @@ function PostIten(props){
 export default function Posts(){
     return(
     <div class="posts">
-        {posts.map((post) => (<PostIten imgTopo={post.imgTopo} textoTopo={post.textoTopo} imgConteudo={post.imgConteudo} quemCurtiu={post.quemCurtiu} maisCurtidas={post.maisCurtidas} />))}
+        {posts.map((post) => (<PostIten imgTopo={post.imgTopo} textoTopo={post.textoTopo} imgConteudo={post.imgConteudo} imgCurtidas={post.imgCurtidas} quemCurtiu={post.quemCurtiu} maisCurtidas={post.maisCurtidas} />))}
     </div>
     )
 }

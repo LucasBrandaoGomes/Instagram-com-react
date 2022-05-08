@@ -2,7 +2,7 @@ const icones = ["paper-plane-outline","compass-outline", "heart-outline", "perso
 
 function Imagen(props) {
     return (
-        <img src={props.urlImagen} />
+        <img src={props.urlImagen} alt =""/>
     
     );
   }
