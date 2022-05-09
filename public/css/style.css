@@ -194,6 +194,7 @@ body {
 .post .fundo .acoes div:first-child ion-icon {
   margin-right: 6px;
 }
+.post ion-icon[name="heart"] { color: red }
 
 .post .fundo .curtidas {
   display: flex;

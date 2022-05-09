@@ -1,14 +1,27 @@
 // PARTE DOS POSTS
-
+import React from "react";
 import Imagen from "./Imagen"
 import Icone from "./Icone"
-const iconesAcoes = ["heart-outline", "chatbubble-outline", "paper-plane-outline"]
 const posts =
 [
     {imgTopo: "assets/img/meowed.svg"  , textoTopo: "meowed" , imgConteudo: "assets/img/gato-telefone.svg", imgCurtidas:"assets/img/respondeai.svg", quemCurtiu:"respondeai" ,  maisCurtidas:"outras 101.523 pessoas"},
     {imgTopo: "assets/img/barked.svg"  , textoTopo: "barked" , imgConteudo: "assets/img/dog.svg", imgCurtidas:"assets/img/adorable_animals.svg", quemCurtiu:"adorable_animals" ,  maisCurtidas:"outras 99.159 pessoas"}
 ]
 function PostIten(props){
+  const [name, setName] = React.useState("heart-outline");
+  
+  function Curtida(click){
+    
+    if (click === "click"){
+    setName("heart")
+    }
+  }
+
+  function Descurtida(click){
+    if (click === "click"){
+      setName("heart-outline")
+    }
+  }
     return(
         <div class="post">
               <div class="topo">
@@ -21,14 +34,16 @@ function PostIten(props){
                 </div>
               </div>
 
-              <div class="conteudo">
+              <div class="conteudo" onClick={() => Curtida("click")}>
                 <Imagen urlImagen={props.imgConteudo} />
               </div>
 
               <div class="fundo">
                 <div class="acoes">
                   <div>
-                    {iconesAcoes.map((icone) => (<Icone nomeIcone={icone}/>))}
+                    <ion-icon name={name} onClick={() => Descurtida("click")}></ion-icon>
+                    <ion-icon name="chatbubble-outline"></ion-icon>
+                    <ion-icon name="paper-plane-outline"></ion-icon> 
                   </div>
                   <div>
                     <Icone nomeIcone="bookmark-outline" />
